@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.stevethorson.backgroundAudio"
+        version="3.3">
+
+  <name>backgroundAudio</name>
+
+  <description>
+    Play background audio in iOS. Audio must be playing when app goes into background mode.
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="*-Info.plist" parent="UIBackgroundModes">
+        <array>
+            <string>audio</string>
+        </array>
+    </config-file>
+  </platform>
+</plugin>
